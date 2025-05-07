@@ -18,7 +18,6 @@ public class InvoiceHeader {
     private BigDecimal subTotalAmount;
     private BigDecimal vatAmount;
     private BigDecimal totalAmount;
-
     private List<InvoiceDetail> invoiceDetails;
 
     public void calculateSubTotalAmount(){
