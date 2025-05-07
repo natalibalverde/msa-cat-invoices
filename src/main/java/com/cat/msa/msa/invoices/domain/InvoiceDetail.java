@@ -19,7 +19,4 @@ public class InvoiceDetail {
         subTotal = unitPrice.multiply(new BigDecimal(quantity));
     }
 
-
-
-
 }
