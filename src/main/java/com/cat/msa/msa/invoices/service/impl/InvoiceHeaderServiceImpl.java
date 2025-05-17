@@ -5,6 +5,8 @@ import com.cat.msa.msa.invoices.repository.InvoiceHeaderRepository;
 import com.cat.msa.msa.invoices.service.InvoiceHeaderService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class InvoiceHeaderServiceImpl implements InvoiceHeaderService {
 
@@ -18,5 +20,10 @@ public class InvoiceHeaderServiceImpl implements InvoiceHeaderService {
     public InvoiceHeader createInvoiceHeader(InvoiceHeader invoiceHeader) {
         invoiceHeader.calculateInvoiceAmounts();
         return invoiceHeaderRepository.save(invoiceHeader);
+    }
+
+    @Override
+    public List<InvoiceHeader> getAllInvoiceHeaders() {
+        return invoiceHeaderRepository.findAll();
     }
 }
