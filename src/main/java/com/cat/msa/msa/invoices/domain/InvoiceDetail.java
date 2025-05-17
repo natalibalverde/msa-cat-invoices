@@ -1,5 +1,6 @@
 package com.cat.msa.msa.invoices.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,6 +31,7 @@ public class InvoiceDetail {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IND_INH_ID", nullable = false)
+    @JsonIgnore
     private InvoiceHeader invoiceHeader;
 
     public void calculateSubTotal(){
