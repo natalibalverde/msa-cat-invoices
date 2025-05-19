@@ -26,4 +26,9 @@ public class InvoiceHeaderServiceImpl implements InvoiceHeaderService {
     public List<InvoiceHeader> getAllInvoiceHeaders() {
         return invoiceHeaderRepository.findAll();
     }
+
+    @Override
+    public InvoiceHeader getInvoiceHeaderByNumber(String number) {
+        return invoiceHeaderRepository.findByNumber(number);
+    }
 }
