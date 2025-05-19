@@ -12,4 +12,6 @@ public interface InvoiceHeaderService {
 
     InvoiceHeader getInvoiceHeaderByNumber(String number);
 
+    void deleteInvoiceHeaderByNumber(String number);
+
 }

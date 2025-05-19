@@ -43,4 +43,10 @@ public class InvoiceHeaderServiceImpl implements InvoiceHeaderService {
         }
         return expectedInvoiceHeader;
     }
+
+    @Override
+    public void deleteInvoiceHeaderByNumber(String number) {
+        InvoiceHeader expectedInvoiceHeader = this.getInvoiceHeaderByNumber(number);
+        invoiceHeaderRepository.deleteByNumber(number);
+    }
 }
