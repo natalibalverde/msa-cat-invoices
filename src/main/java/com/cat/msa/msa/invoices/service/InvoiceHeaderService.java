@@ -10,4 +10,6 @@ public interface InvoiceHeaderService {
 
     List<InvoiceHeader> getAllInvoiceHeaders();
 
+    InvoiceHeader getInvoiceHeaderByNumber(String number);
+
 }
